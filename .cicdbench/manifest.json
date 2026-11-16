@@ -1,0 +1,41 @@
+{
+  "provider": "github",
+  "round": "gate-r0",
+  "manifests": {
+    ".github/workflows/ci.yml": {
+      "removedTriggers": [
+        "workflow_call",
+        "push"
+      ],
+      "removedEnv": [],
+      "removedJobs": [],
+      "runsOnChanges": [
+        {
+          "job": "build_app",
+          "from": "ubuntu-latest"
+        },
+        {
+          "job": "build_docker",
+          "from": "ubuntu-latest"
+        }
+      ],
+      "localReusable": [],
+      "removedSteps": []
+    }
+  },
+  "deleted": [
+    ".github/workflows/codeql-analysis.yml",
+    ".github/workflows/deploy.yml",
+    ".github/workflows/e2e-tests.yml",
+    ".github/workflows/first-interaction.yml",
+    ".github/workflows/issue-labeler.yml",
+    ".github/workflows/issue-opened.yml",
+    ".github/workflows/pr-labeler.yml",
+    ".github/workflows/publish.yml",
+    ".github/workflows/semantic-pull-requests.yml",
+    ".github/workflows/stale.yml",
+    ".github/workflows/translations-force-pull.yml",
+    ".github/workflows/translations-pull.yml",
+    ".github/workflows/translations-upload.yml"
+  ]
+}
